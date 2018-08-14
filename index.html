@@ -10,8 +10,10 @@
 <style type="text/css">
 	*{ -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-box-sizing: border-box; box-sizing: border-box; }
 	html{ width: 100%; height: 100%; }
-	body{ margin: 0; background: #326a7e; color: #f0f0f0;}
-	.content{ margin-bottom: 50px; padding-left: 15px; padding-right: 15px;}
+	body{ margin: 0; background: #15344e; color: #f0f0f0;}
+	.content{ padding: 80px 20px;}
+	.text_wrapper{ display: -webkit-box; display: flex; }
+	.text_wrapper .text{ padding-top: 20px; padding-left: 20px; }
 	.hide{ display: none !important; }
 	p{ margin: 0; }
 	.btn-groups{ padding-right: 20px; text-align: center; }
@@ -29,17 +31,7 @@
 	.container .modal{ width: 80%; height: 160px; position: absolute; top: 50%; left: 50%; padding: 20px 15px; border-radius: 5px; transform: translate(-50%, -70%); -webkit-transform: translate(-50%，-70%); background: #f3f3f3;}
 	.container .modal p{ margin-top: 20px; margin-bottom: 20px; font-size: 16px; color: #353535; text-align: center;}
 	.confirm{ display: block; width: 120px; height: 40px; margin: 0 auto; border: none; font-size: 16px; border-radius: 5px; color: #ffffff; background: #f45cae; }
-	#heartLine{ padding: 0; }
-	#line_path{stroke-dasharray: 500; stroke-dashoffset: 1525; animation: heartLine 3s linear infinite; -webkit-animation: heartLine 3s linear infinite;}
 	.type_words{ padding: 12px 20px; }
-	@keyframes heartLine {
-		form{
-			stroke-dashoffset: 1525;
-		}
-		to{
-			stroke-dashoffset: 0;
-		}
-	}
 	@keyframes breath {
 		0% {
 			transform: scale3d(1,1,1);
@@ -60,12 +52,8 @@
 </style>
 <script type="text/javascript">
 	$(function() {
-		var w = $('body').innerWidth();
-		var path = $('#heartLine');
-		path.attr('width', w);
-		path.attr('height', 300);
 		$('#yes').click(function(event) {
-			modal('我就知道小姐姐您一定会同意的。(^_^)', function() {
+			modal('我就知道小哥哥您一定会愿意的。(^_^)', function() {
 				$('.page_one').addClass('hide');
 				$('.page_two').removeClass('hide');
 				// typeWrite();
@@ -99,23 +87,23 @@
 	}
 
 	function F() {
-		modal('跟我走吧', G);
+		modal('我不要房', G);
 	}
 
 	function G() {
-		modal('房产证上写你名', H);
+		modal('我不要车', H);
 	}
 
 	function H() {
-		modal('我会做饭', I);
+		modal('我会给你做好吃的', I);
 	}
 
 	function I() {
-		modal('爱你。么么哒！', J)
+		modal('愿不愿意嘛。亲爱的小哥哥！', J)
 	}
 
 	function J() {
-		modal('行，我们去民政局登记吧', function() {
+		modal('行，我们去民政局登记吧。么么哒！', function() {
 			fireworks();
 		});
 	}
@@ -162,11 +150,13 @@
 </script>
 <body>
 	<div class="page_one">
-		<svg id="heartLine" style="background: #326a7e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<path id="line_path" d="M0 120 L20 120 L50 60 L76 120 L98 120 L108 140 L145 10 L187 220 L206 120 L224 120 L245 80 L265 120 L300 120 L316 100 L342 160 L390 30 L430 290 L460 120 L500 120" fill="none" stroke="#fff" stroke-width="1"></path>
-		</svg>
 		<div class="content">
-			<p>小姐姐，我好喜欢你，你愿意做我女朋友吗？</p>
+			<div class="text_wrapper">
+				<img src="images/a7.png" alt="">
+				<div class="text">
+					小哥哥，我好喜欢你喔，你愿意做我男朋友吗
+				</div>
+			</div>
 		</div>
 		<div class="btn-groups">
 			<div class="heart-btn">
